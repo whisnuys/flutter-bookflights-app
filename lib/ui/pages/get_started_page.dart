@@ -53,7 +53,9 @@ class GetStartedPage extends StatelessWidget {
                     bottom: 80,
                   ),
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/sign-up');
+                    },
                     child: Text(
                       'Get Started',
                       style: whiteTextStyle.copyWith(
@@ -65,7 +67,7 @@ class GetStartedPage extends StatelessWidget {
                       backgroundColor: kPrimaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
-                          17,
+                          defaultRadius,
                         ),
                       ),
                     ),

@@ -1,5 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+double defaultMargin = 24.0;
+double defaultRadius = 17.0;
 
 Color kPrimaryColor = Color(0xFF5C40CC);
 Color kBlackColor = Color(0xFF1F1449);
@@ -7,7 +12,7 @@ Color kWhiteColor = Color(0xFFFFFFFF);
 Color kGreyColor = Color(0xFF9698A9);
 Color kGreenColor = Color(0xFF0EC3AE);
 Color kRedColor = Color(0xFFEB70A5);
-Color kBackgroundColor = Color(0xFFEB70A5);
+Color kBackgroundColor = Color(0xFFFAFAFA);
 Color kInactiveColor = Color(0xffDBD7EC);
 
 TextStyle blackTextStyle = GoogleFonts.poppins(
