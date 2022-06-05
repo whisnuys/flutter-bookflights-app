@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:bwa_airplane/ui/pages/bonus_page.dart';
 import 'package:bwa_airplane/ui/pages/get_started_page.dart';
 import 'package:bwa_airplane/ui/pages/signup_page.dart';
 import 'package:bwa_airplane/ui/pages/splash_page.dart';
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => SplashPage(),
         "/get-started": (context) => GetStartedPage(),
         "/sign-up": (context) => SignUpPage(),
+        "/bonus": (context) => BonusPage(),
       },
     );
   }
