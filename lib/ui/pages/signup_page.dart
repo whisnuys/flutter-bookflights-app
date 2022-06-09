@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, non_constant_identifier_names
 
 import 'package:bwa_airplane/ui/widgets/custom_button.dart';
+import 'package:bwa_airplane/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
@@ -24,120 +25,24 @@ class SignUpPage extends StatelessWidget {
 
     Widget InputSection() {
       Widget nameInput() {
-        return Container(
-          margin: EdgeInsets.only(
-            bottom: 20,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Full Name',
-                style: blackTextStyle,
-              ),
-              SizedBox(
-                height: 6,
-              ),
-              TextFormField(
-                cursorColor: kBlackColor,
-                decoration: InputDecoration(
-                  hintText: "Your full name",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                    borderSide: BorderSide(
-                      color: kPrimaryColor,
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
+        return CustomTextFormField(
+          title: 'Full Name',
+          hintText: 'Your full name',
         );
       }
 
       Widget emailInput() {
-        return Container(
-          margin: EdgeInsets.only(
-            bottom: 20,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Email Address',
-                style: blackTextStyle,
-              ),
-              SizedBox(
-                height: 6,
-              ),
-              TextFormField(
-                cursorColor: kBlackColor,
-                decoration: InputDecoration(
-                  hintText: "Your email address",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                    borderSide: BorderSide(
-                      color: kPrimaryColor,
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
+        return CustomTextFormField(
+          title: 'Email Address',
+          hintText: 'Your email address',
         );
       }
 
       Widget passwordInput() {
-        return Container(
-          margin: EdgeInsets.only(
-            bottom: 20,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Password',
-                style: blackTextStyle,
-              ),
-              SizedBox(
-                height: 6,
-              ),
-              TextFormField(
-                obscureText: true,
-                cursorColor: kBlackColor,
-                decoration: InputDecoration(
-                  hintText: "Your password",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(
-                      defaultRadius,
-                    ),
-                    borderSide: BorderSide(
-                      color: kPrimaryColor,
-                    ),
-                  ),
-                ),
-              )
-            ],
-          ),
+        return CustomTextFormField(
+          title: 'Password',
+          hintText: 'Your password',
+          obscureText: true,
         );
       }
 
