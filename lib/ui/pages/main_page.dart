@@ -3,12 +3,17 @@
 import 'package:bwa_airplane/ui/widgets/custom_bottom_nav_item.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
+import 'home_page.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Widget buildContent(){
+      return HomePage();
+    }
+
     Widget customBottomNavigation() {
       return Align(
         alignment: Alignment.bottomCenter,
@@ -51,7 +56,7 @@ class MainPage extends StatelessWidget {
       backgroundColor: kBackgroundColor,
       body: Stack(
         children: [
-          Text('mainPage'),
+          buildContent(),
           customBottomNavigation(),
         ],
       ),
