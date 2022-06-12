@@ -4,13 +4,24 @@ import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
 class DestinationTile extends StatelessWidget {
-  const DestinationTile({Key? key}) : super(key: key);
+  final String name;
+  final String city;
+  final String imageUrl;
+  final String rating;
+
+  const DestinationTile({
+    Key? key,
+    required this.name,
+    required this.city,
+    required this.imageUrl,
+    this.rating = '0.0',
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 16),
-      padding: EdgeInsets.fromLTRB(10,10,16,10),
+      padding: EdgeInsets.fromLTRB(10, 10, 16, 10),
       decoration: BoxDecoration(
         color: kWhiteColor,
         borderRadius: BorderRadius.circular(18),
@@ -25,7 +36,7 @@ class DestinationTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(18),
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage('assets/image_destination6.png'),
+                image: AssetImage(imageUrl),
               ),
             ),
           ),
@@ -34,14 +45,14 @@ class DestinationTile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Danau Beratan',
+                  name,
                   style: blackTextStyle.copyWith(
                     fontWeight: medium,
                     fontSize: 18,
                   ),
                 ),
                 Text(
-                  'Singaraja',
+                  city,
                   style: greyTextStyle.copyWith(
                     fontWeight: light,
                   ),
@@ -64,7 +75,7 @@ class DestinationTile extends StatelessWidget {
                 ),
               ),
               Text(
-                '4.8',
+                rating,
                 style: blackTextStyle.copyWith(
                   fontWeight: medium,
                 ),
