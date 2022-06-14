@@ -53,6 +53,8 @@ class DetailPage extends StatelessWidget {
                 ),
               ),
             ),
+
+            // NOTE: Title
             Container(
               margin: EdgeInsets.only(top: 256),
               width: double.infinity,
@@ -68,6 +70,7 @@ class DetailPage extends StatelessWidget {
                             fontWeight: semiBold,
                             fontSize: 24,
                           ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                         Text(
                           'Tangerang',
