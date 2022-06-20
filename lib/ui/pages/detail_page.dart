@@ -1,5 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:bwa_airplane/ui/widgets/interest_item.dart';
+import 'package:bwa_airplane/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
@@ -107,6 +109,99 @@ class DetailPage extends StatelessWidget {
                 ],
               ),
             ),
+
+            //  NOTE: Description
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.only(top: 30),
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+              decoration: BoxDecoration(
+                color: kWhiteColor,
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  //  NOTE: About
+                  Text(
+                    'About',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Text(
+                    'Berada di jalur jalan provinsi yang menghubungkan Denpasar Singaraja serta letaknya yang dekat dengan Kebun Raya Eka Karya menjadikan tempat Bali.',
+                    style: blackTextStyle.copyWith(
+                      height: 2,
+                    ),
+                  ),
+
+                  // NOTE: Photos
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Photos',
+                    style: blackTextStyle.copyWith(
+                      fontWeight: semiBold,
+                      fontSize: 16,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 6,
+                  ),
+                  Row(
+                    children: [
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo1.png',
+                      ),
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo2.png',
+                      ),
+                      PhotoItem(
+                        imageUrl: 'assets/image_photo3.png',
+                      ),
+                    ],
+                  ),
+
+                  // NOTE: Interest
+                  SizedBox(height: 20),
+                  Text(
+                    'Interest',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                    ),
+                  ),
+                  SizedBox(height: 6),
+                  Row(
+                    children: [
+                      InterestItem(
+                        text: 'Kids Park',
+                      ),
+                      InterestItem(
+                        text: 'Honor Bridge',
+                      ),
+                    ],
+                  ),
+                  SizedBox(height:10),
+                  Row(
+                    children: [
+                      InterestItem(
+                        text: 'Kids Park',
+                      ),
+                      InterestItem(
+                        text: 'Honor Bridge',
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       );
@@ -114,11 +209,13 @@ class DetailPage extends StatelessWidget {
 
     return Scaffold(
         backgroundColor: kBackgroundColor,
-        body: Stack(
-          children: [
-            headerImage(),
-            content(),
-          ],
+        body: SingleChildScrollView(
+          child: Stack(
+            children: [
+              headerImage(),
+              content(),
+            ],
+          ),
         ));
   }
 }
