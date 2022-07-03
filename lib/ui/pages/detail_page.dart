@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:bwa_airplane/ui/pages/choose_seat_page.dart';
+import 'package:bwa_airplane/ui/widgets/custom_button.dart';
 import 'package:bwa_airplane/ui/widgets/interest_item.dart';
 import 'package:bwa_airplane/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
@@ -188,7 +190,7 @@ class DetailPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height:10),
+                  SizedBox(height: 10),
                   Row(
                     children: [
                       InterestItem(
@@ -198,6 +200,54 @@ class DetailPage extends StatelessWidget {
                         text: 'Honor Bridge',
                       ),
                     ],
+                  ),
+                ],
+              ),
+            ),
+            // NOTE: Price & Book Button
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.symmetric(
+                vertical: 30,
+              ),
+              child: Row(
+                children: [
+                  // NOTE: Price
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'IDR 2.500.000',
+                          style: blackTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: medium,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'per orang',
+                          style: blackTextStyle.copyWith(
+                            fontWeight: light,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  // NOTE: Book Button
+                  CustomButton(
+                    title: 'Book Now',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ChooseSeatPage(),
+                        ),
+                      );
+                    },
+                    width: 170,
                   ),
                 ],
               ),
