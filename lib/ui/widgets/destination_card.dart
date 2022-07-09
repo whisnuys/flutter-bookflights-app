@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:bwa_airplane/ui/pages/detail_page.dart';
+import 'package:bookflights/ui/pages/detail_page.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 

@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
-import 'package:bwa_airplane/ui/pages/checkout_page.dart';
-import 'package:bwa_airplane/ui/widgets/custom_button.dart';
-import 'package:bwa_airplane/ui/widgets/seat_item.dart';
+import 'package:bookflights/ui/pages/checkout_page.dart';
+import 'package:bookflights/ui/widgets/custom_button.dart';
+import 'package:bookflights/ui/widgets/seat_item.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 

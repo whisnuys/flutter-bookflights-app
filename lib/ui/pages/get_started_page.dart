@@ -1,6 +1,6 @@
 // ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
 
-import 'package:bwa_airplane/ui/widgets/custom_button.dart';
+import 'package:bookflights/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 

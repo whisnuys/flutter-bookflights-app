@@ -1,7 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, non_constant_identifier_names
 
-import 'package:bwa_airplane/ui/widgets/custom_button.dart';
-import 'package:bwa_airplane/ui/widgets/custom_text_form_field.dart';
+import 'package:bookflights/ui/widgets/custom_button.dart';
+import 'package:bookflights/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 

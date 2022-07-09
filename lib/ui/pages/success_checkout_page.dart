@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:bwa_airplane/shared/theme.dart';
-import 'package:bwa_airplane/ui/widgets/custom_button.dart';
+import 'package:bookflights/shared/theme.dart';
+import 'package:bookflights/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class SuccessCheckoutPage extends StatelessWidget {

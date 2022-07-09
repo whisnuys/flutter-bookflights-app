@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:bwa_airplane/cubit/page_cubit.dart';
-import 'package:bwa_airplane/ui/pages/setting_page.dart';
-import 'package:bwa_airplane/ui/pages/transaction_page.dart';
-import 'package:bwa_airplane/ui/pages/wallet_page.dart';
-import 'package:bwa_airplane/ui/widgets/custom_bottom_nav_item.dart';
+import 'package:bookflights/cubit/page_cubit.dart';
+import 'package:bookflights/ui/pages/setting_page.dart';
+import 'package:bookflights/ui/pages/transaction_page.dart';
+import 'package:bookflights/ui/pages/wallet_page.dart';
+import 'package:bookflights/ui/widgets/custom_bottom_nav_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../shared/theme.dart';

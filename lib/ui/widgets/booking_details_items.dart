@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:bwa_airplane/shared/theme.dart';
+import 'package:bookflights/shared/theme.dart';
 import 'package:flutter/material.dart';
 
 class BookingDetailsItem extends StatelessWidget {

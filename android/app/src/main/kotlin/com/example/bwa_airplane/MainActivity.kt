@@ -1,4 +1,4 @@
-package com.example.bwa_airplane
+package com.whisnuys.bookflights
 
 import io.flutter.embedding.android.FlutterActivity
 

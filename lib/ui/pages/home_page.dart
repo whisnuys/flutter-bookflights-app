@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:bwa_airplane/ui/widgets/destination_card.dart';
-import 'package:bwa_airplane/ui/widgets/destination_tile.dart';
+import 'package:bookflights/ui/widgets/destination_card.dart';
+import 'package:bookflights/ui/widgets/destination_tile.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 

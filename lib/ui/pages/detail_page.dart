@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:bwa_airplane/ui/pages/choose_seat_page.dart';
-import 'package:bwa_airplane/ui/widgets/custom_button.dart';
-import 'package:bwa_airplane/ui/widgets/interest_item.dart';
-import 'package:bwa_airplane/ui/widgets/photo_item.dart';
+import 'package:bookflights/ui/pages/choose_seat_page.dart';
+import 'package:bookflights/ui/widgets/custom_button.dart';
+import 'package:bookflights/ui/widgets/interest_item.dart';
+import 'package:bookflights/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 

@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:bwa_airplane/shared/theme.dart';
+import 'package:bookflights/shared/theme.dart';
 
 class CustomTextFormField extends StatelessWidget {
   final String title;

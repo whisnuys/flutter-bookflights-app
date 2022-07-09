@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:bwa_airplane/ui/pages/success_checkout_page.dart';
-import 'package:bwa_airplane/ui/widgets/booking_details_items.dart';
-import 'package:bwa_airplane/ui/widgets/custom_button.dart';
+import 'package:bookflights/ui/pages/success_checkout_page.dart';
+import 'package:bookflights/ui/widgets/booking_details_items.dart';
+import 'package:bookflights/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "65598331552",
+    "project_id": "bookflights-app",
+    "storage_bucket": "bookflights-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65598331552:android:dc48e6772089ee4b1187c5",
+        "android_client_info": {
+          "package_name": "com.whisnuys.bookflights"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65598331552-oufhd6lsratu7541rv88972dla98s4dq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnrNyOGACbjSJDIoWHr98vWsUOCY_sfYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65598331552-oufhd6lsratu7541rv88972dla98s4dq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "65598331552-0ccuecmo3n18c95ddfl6qs702mrodqjv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.whisnuys.bookflights"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
