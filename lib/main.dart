@@ -5,6 +5,7 @@ import 'package:bookflights/cubit/page_cubit.dart';
 import 'package:bookflights/ui/pages/bonus_page.dart';
 import 'package:bookflights/ui/pages/get_started_page.dart';
 import 'package:bookflights/ui/pages/main_page.dart';
+import 'package:bookflights/ui/pages/signin_page.dart';
 import 'package:bookflights/ui/pages/signup_page.dart';
 import 'package:bookflights/ui/pages/splash_page.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
           "/": (context) => SplashPage(),
           "/get-started": (context) => GetStartedPage(),
           "/sign-up": (context) => SignUpPage(),
+          "/sign-in": (context) => SignInPage(),
           "/bonus": (context) => BonusPage(),
           "/main": (context) => MainPage(),
         },
