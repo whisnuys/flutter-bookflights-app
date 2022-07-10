@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:bookflights/cubit/auth_cubit.dart';
 import 'package:bookflights/cubit/page_cubit.dart';
 import 'package:bookflights/ui/pages/bonus_page.dart';
 import 'package:bookflights/ui/pages/get_started_page.dart';
@@ -26,6 +27,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => PageCubit(),
+        ),
+        BlocProvider(
+          create: (context) => AuthCubit(),
         ),
       ],
       child: MaterialApp(
