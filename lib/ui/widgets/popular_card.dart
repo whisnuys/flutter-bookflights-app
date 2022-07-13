@@ -1,21 +1,16 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:bookflights/models/destination_model.dart';
 import 'package:bookflights/ui/pages/detail_page.dart';
 import 'package:flutter/material.dart';
 import '../../shared/theme.dart';
 
 class PopularCard extends StatelessWidget {
-  final String name;
-  final String city;
-  final String imageUrl;
-  final String rating;
+  final DestinationModel destination;
 
-  const PopularCard({
+  const PopularCard(
+    this.destination, {
     Key? key,
-    required this.name,
-    required this.city,
-    required this.imageUrl,
-    this.rating = '0.0',
   }) : super(key: key);
 
   @override
@@ -25,7 +20,7 @@ class PopularCard extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => DetailPage(),
+            builder: (context) => DetailPage(destination),
           ),
         );
       },
@@ -48,8 +43,8 @@ class PopularCard extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(18),
                 image: DecorationImage(
-                  image: AssetImage(
-                    imageUrl,
+                  image: NetworkImage(
+                    destination.imageUrl,
                   ),
                 ),
               ),
@@ -79,7 +74,7 @@ class PopularCard extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        rating,
+                        destination.rating.toString(),
                         style: blackTextStyle.copyWith(
                           fontWeight: medium,
                         ),
@@ -95,7 +90,7 @@ class PopularCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    name,
+                    destination.name,
                     style: blackTextStyle.copyWith(
                       fontSize: 18,
                       fontWeight: medium,
@@ -105,7 +100,7 @@ class PopularCard extends StatelessWidget {
                     height: 6,
                   ),
                   Text(
-                    city,
+                    destination.city,
                     style: greyTextStyle.copyWith(
                       fontWeight: light,
                     ),

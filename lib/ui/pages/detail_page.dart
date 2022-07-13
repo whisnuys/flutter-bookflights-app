@@ -1,14 +1,17 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:bookflights/models/destination_model.dart';
 import 'package:bookflights/ui/pages/choose_seat_page.dart';
 import 'package:bookflights/ui/widgets/custom_button.dart';
 import 'package:bookflights/ui/widgets/interest_item.dart';
 import 'package:bookflights/ui/widgets/photo_item.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import '../../shared/theme.dart';
 
 class DetailPage extends StatelessWidget {
-  const DetailPage({Key? key}) : super(key: key);
+  final DestinationModel destination;
+  const DetailPage(this.destination, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +22,7 @@ class DetailPage extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage('assets/image_destination1.png'),
+            image: NetworkImage(destination.imageUrl),
           ),
         ),
         child: Container(
@@ -69,7 +72,7 @@ class DetailPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Lake Ciliwung',
+                          destination.name,
                           style: whiteTextStyle.copyWith(
                             fontWeight: semiBold,
                             fontSize: 24,
@@ -77,7 +80,7 @@ class DetailPage extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                         Text(
-                          'Tangerang',
+                          destination.city,
                           style: whiteTextStyle.copyWith(
                             fontWeight: light,
                             fontSize: 16,
@@ -101,7 +104,7 @@ class DetailPage extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        '4.8',
+                        destination.rating.toString(),
                         style: whiteTextStyle.copyWith(
                           fontWeight: medium,
                         ),
@@ -194,7 +197,7 @@ class DetailPage extends StatelessWidget {
                   Row(
                     children: [
                       InterestItem(
-                        text: 'Kids Park',
+                        text: 'City Museum',
                       ),
                       InterestItem(
                         text: 'Honor Bridge',
@@ -218,7 +221,11 @@ class DetailPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'IDR 2.500.000',
+                          NumberFormat.currency(
+                            locale: 'id',
+                            symbol: 'IDR ',
+                            decimalDigits: 0,
+                          ).format(destination.price),
                           style: blackTextStyle.copyWith(
                             fontSize: 18,
                             fontWeight: medium,
