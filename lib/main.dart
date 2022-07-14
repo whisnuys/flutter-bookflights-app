@@ -4,6 +4,7 @@ import 'package:bookflights/cubit/auth_cubit.dart';
 import 'package:bookflights/cubit/destination_cubit.dart';
 import 'package:bookflights/cubit/newdestination_cubit.dart';
 import 'package:bookflights/cubit/page_cubit.dart';
+import 'package:bookflights/cubit/seat_cubit.dart';
 import 'package:bookflights/ui/pages/bonus_page.dart';
 import 'package:bookflights/ui/pages/get_started_page.dart';
 import 'package:bookflights/ui/pages/main_page.dart';
@@ -39,7 +40,10 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => NewdestinationCubit(),
-        )
+        ),
+        BlocProvider(
+          create: (context) => SeatCubit(),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
