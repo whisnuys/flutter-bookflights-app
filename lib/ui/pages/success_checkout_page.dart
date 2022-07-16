@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:bookflights/cubit/page_cubit.dart';
 import 'package:bookflights/shared/theme.dart';
 import 'package:bookflights/ui/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SuccessCheckoutPage extends StatelessWidget {
   const SuccessCheckoutPage({Key? key}) : super(key: key);
@@ -46,6 +48,7 @@ class SuccessCheckoutPage extends StatelessWidget {
             CustomButton(
               title: 'My Bookings',
               onPressed: () {
+                context.read<PageCubit>().setPage(1);
                 Navigator.pushNamedAndRemoveUntil(
                     context, '/main', (route) => false);
               },
