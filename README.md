@@ -10,7 +10,7 @@
 - Handles sign-in, sign-up with firebase
 
 ### Packages Used
-- bgoogle_fonts
+- google_fonts
 - flutter_bloc
 - firebase_auth
 - firebase_core
